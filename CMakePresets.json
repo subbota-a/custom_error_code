@@ -1,0 +1,26 @@
+{
+    "version": 3,
+    "configurePresets": [
+      {
+        "name": "debug",
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/cmake-build-debug",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Debug",
+          "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake-build-debug/conan/conan_toolchain.cmake"
+        },
+        "description": "Debug configuration using Conan dependencies"
+      },
+      {
+        "name": "release",
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/cmake-build-release",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Release",
+          "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake-build-release/conan/conan_toolchain.cmake"
+        },
+        "description": "Release configuration using Conan dependencies"
+      }
+    ]
+  }
+  
